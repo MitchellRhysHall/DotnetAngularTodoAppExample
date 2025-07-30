@@ -1,0 +1,29 @@
+<div class="todo-container">
+  <h2>Todo List</h2>
+  <form (submit)="addTodo(); $event.preventDefault();" class="todo-form">
+    <input [(ngModel)]="newTitle" name="title" placeholder="Title" required/>
+    <input [(ngModel)]="newDescription" name="description" placeholder="Description"/>
+      <button type="submit">Add Todo</button>
+    </form>
+
+    <ul>
+      @for (todo of todos; track todo.title) {
+        <li [class.done]="todo.isDone">
+          <div class="todo-header">
+            <label class="checkbox">
+              <input
+                type="checkbox"
+                [checked]="todo.isDone"
+                (change)="completeTodo(todo.title)"
+                />
+              <strong>{{ todo.title }}</strong>
+            </label>
+
+            <button (click)="deleteTodo(todo.title)">🗑</button>
+              </div>
+              <p class="description">{{ todo.description }}</p>
+            </li>
+        }
+    </ul>
+</div>
+
