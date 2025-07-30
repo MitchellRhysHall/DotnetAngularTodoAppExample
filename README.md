@@ -25,7 +25,7 @@ A simple **Todo** application demonstrating a modern full-stack web app built wi
 ### Prerequisites
 
 - [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)  
-- [Node.js and npm](https://nodejs.org/) (for Angular)  
+- [Node.js and npm](https://nodejs.org/) (Ensure the relevant npm packages are installed)
 - Angular CLI  
 
 ## License
